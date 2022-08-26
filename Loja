@@ -1,0 +1,24 @@
+package tads.poo.ADO2608;
+
+/*
+SENAC - TADS - POO
+@author barbaraargolo - 
+*Objetivo: Busca e Produto
+*Descrição: Fazer busca do melhor preço de um determinado produto
+ */
+ 
+import javax.swing.JOptionPane;
+
+
+   public class Loja {
+       public static void main(String[] args) {
+           String [] codProduto = {"100","101","102","103","104","105","106","107","108","109"};
+           float[] preco = {50,52,30,50,49,21,31,79,31};
+           String codigo = JOptionPane.showInputDialog("Digite o Código do produto: ");
+           for (int i = 0 ; i < codProduto.length; i++) {
+       if(codigo.equals(codProduto[i])) {
+           JOptionPane.showInternalMessageDialog(null, "O produto: " + codigo + "\nCusta: R$ " + preco[i]);
+         }
+      }
+   }
+}
